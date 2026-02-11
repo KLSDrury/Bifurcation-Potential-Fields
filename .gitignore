@@ -1,0 +1,15 @@
+# MATLAB autosave / backup
+*.asv
+*.m~
+*.bak
+
+# MATLAB crash dumps
+matlab_crash_dump*
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+
+# Dropbox metadata
+.dropbox
+.dropbox.attr
