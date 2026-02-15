@@ -42,12 +42,10 @@ In the paper, we vary:
 Typical ranges used:
 
 ```
-K ∈ [0, 10]     (example range — adjust if needed)
-r ∈ [0, 2]      (example range — adjust if needed)
+K ∈ [0, 25]     
+r ∈ [0, 0.8]      
 grid = 350 × 350
 ```
-
-(Replace these with the exact ranges used in your paper if different.)
 
 ---
 
@@ -80,10 +78,9 @@ The paper specifies which configuration is used.
 From within the `SBW/` directory, run:
 
 ```matlab
-sbw_make_vb("high","K",[Kmin Kmax],"r",[rmin rmax],[350 350]);
+sbw_make_vb("high","K",[0 25],"r",[0 0.8],[350 350]);
 ```
 
-(Replace parameter ranges with those used in the paper.)
 
 This generates:
 
@@ -109,6 +106,9 @@ After computing fold (limit point) curves:
 ```
 SBW/mats/
 ```
+
+The curves used in the paper are already in the mats directory
+
 
 2. Open the VB field figure.
 
@@ -137,7 +137,7 @@ The SBW model demonstrates how:
 
 - A biologically realistic system exhibits classical fold-induced bistability.
 - Basin geometry shifts as ecological parameters vary.
-- Resilience can be interpreted geometrically as distance to collapse.
+- Stability margins can be interpreted geometrically as distance to collapse.
 
 As parameters approach the fold boundary:
 
