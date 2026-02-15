@@ -33,7 +33,8 @@ The VB field measures the Euclidean distance between a selected stable equilibri
 From within the `DW/` directory, run:
 
 ```matlab
-resilienceSweep_doubleWell('b', [-1.1 1.1], 'a', [0 2], [350 350]);
+% Example:
+%   dw_make_vb("low","b",[-1.1 1.1],"a",[0 2],[50 50]);
 ```
 
 This reproduces the parameter region used in the paper.
@@ -76,6 +77,8 @@ After computing the fold (limit point) curves:
 DW/mats/
 ```
 
+The curves used in the paper are already in the mats directory.
+
 2. Open the VB field figure in MATLAB.
 
 3. Run:
@@ -94,8 +97,6 @@ The script automatically:
 ```
 DW/figs/
 ```
-
-No manual copying from MatCont figures is required.
 
 ---
 
@@ -122,9 +123,9 @@ The field therefore encodes:
 ```
 DW/
 │
-├── resilienceSweep_doubleWell.m
-├── find_real_eqa_doubleWell.m
-├── classify_equilibria_doubleWell.m
+├── dw_make_vb.m
+├── find_real_eqa_dw.m
+├── classify_equilibria_dw.m
 ├── overlayBifurcationBoundary.m
 ├── overlay_config.m
 │
