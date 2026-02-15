@@ -69,7 +69,7 @@ Because the system is two-dimensional, equilibria are points in \((x_1, x_2)\)-s
 
 where \( \| \cdot \| \) denotes the Euclidean norm.
 
-The script selects the high-equilibrium configuration used in the paper.
+The script can select either the low- or high-equilibrium configuration used in the paper.
 
 ---
 
@@ -78,7 +78,9 @@ The script selects the high-equilibrium configuration used in the paper.
 From within the `DUFF/` directory, run:
 
 ```matlab
-lowDuffingSweep('f', [-4.25 4.25], 'a', [-5 0.5], [350 350]);
+% Example:
+%   duffing_make_vb("low", "f", [-4.25 4.25], "a", [-5 0.5], ...
+%    [50 50]);
 ```
 
 This generates:
@@ -86,7 +88,7 @@ This generates:
 - Raw VB data in `mats/`
 - A VB field figure in `figs/`
 
-Smaller grids (e.g., `[60 60]`) may be used for testing.
+Smaller grids (e.g., `[50 50]`) may be used for testing.  High resolution figures in the paper used [350 350].
 
 ---
 
@@ -105,6 +107,7 @@ After computing fold (limit point) curves:
 ```
 DUFF/mats/
 ```
+The curves used in the paper are currently in the mats directory.
 
 2. Open the VB field figure in MATLAB.
 
